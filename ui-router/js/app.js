@@ -13,6 +13,8 @@ var uiRouterDemoApp = angular.module('uiRouterDemoApp', [
 uiRouterDemoApp.config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
 
+    $urlRouterProvider.otherwise('/phones');
+
     $stateProvider.
       state('phones', {
         url: '/phones',
@@ -20,7 +22,7 @@ uiRouterDemoApp.config(['$stateProvider', '$urlRouterProvider',
         controller: 'PhoneListCtrl'
       }).
       state('phones.detail', {
-        url: '/phones/:phoneId',
+        url: '/:phoneId',
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl'
       });
