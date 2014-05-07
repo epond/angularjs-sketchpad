@@ -10,8 +10,8 @@ controllers.controller('PhoneListCtrl', ['$scope',
     $scope.phone = 'Rosebud';
   }]);
 
-controllers.controller('PhoneDetailCtrl', ['$scope',
-  function($scope) {
+controllers.controller('PhoneDetailCtrl', ['$scope', '$stateParams',
+  function($scope, $stateParams) {
     console.log("2");
-    $scope.data = "Cthulhu R'lyeh ";
+    $scope.data = $stateParams.phoneId + " Cthulhu R'lyeh ";
   }]);
