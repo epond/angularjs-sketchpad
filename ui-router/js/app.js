@@ -25,5 +25,9 @@ uiRouterDemoApp.config(['$stateProvider', '$urlRouterProvider',
         url: '/:phoneId',
         templateUrl: 'partials/phone-detail.html',
         controller: 'PhoneDetailCtrl'
+      }).
+      state('about', {
+        url: '/about',
+        templateUrl: 'partials/about.html'
       });
   }]);
